@@ -1,0 +1,17 @@
+{
+    "name": "Pong.Pad",
+    "rootNamespace": "Pong.Pad",
+    "references": [
+        "GUID:356384ef5b61d8e45b6c4e7cd6c8eb1e",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
