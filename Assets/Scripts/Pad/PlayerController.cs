@@ -4,11 +4,8 @@ using UnityEngine.InputSystem;
 
 namespace Pong.Pad
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MonoBehaviour, IPadController
     {
-        [SerializeField] private PadMovement testPad;
-        [SerializeField] private bool testPadIsLeft;
-        
         private PlayerInputs _playerInputs;
         private PadMovement _padMovement;
         private InputAction _moveAction;
@@ -16,7 +13,6 @@ namespace Pong.Pad
         private void Awake()
         {
             _playerInputs = new PlayerInputs();
-            Posses(testPad, testPadIsLeft);
         }
 
         private void OnDestroy()
@@ -35,7 +31,7 @@ namespace Pong.Pad
             _playerInputs.Disable();
         }
 
-        public void Posses(PadMovement padMovement, bool isLeftPlayer)
+        public void Possess(PadMovement padMovement, bool isLeftPlayer)
         {
             _padMovement = padMovement;
             _moveAction = isLeftPlayer ? _playerInputs.LeftPlayer.Move : _playerInputs.RightPlayer.Move;

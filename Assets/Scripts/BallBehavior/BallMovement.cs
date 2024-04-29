@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,12 +8,13 @@ namespace Pong.BallBehavior
         [SerializeField] private Rigidbody2D ballBody;
         [SerializeField] private float velocity;
         [SerializeField] private LayerMask obstacleLayers;
-        
+
+        private Vector2 _initialPosition;
         private RaycastHit2D _hit;
 
         private void Start()
         {
-            StartMovingToRandomDirection();
+            _initialPosition = ballBody.position;
         }
 
         private void Reset()
@@ -30,7 +30,13 @@ namespace Pong.BallBehavior
                 ballBody.velocity = Vector2.Reflect(ballBody.velocity, _hit.normal);
         }
 
-        private void StartMovingToRandomDirection()
+        public void ResetPosition()
+        {
+            ballBody.position = _initialPosition;
+            ballBody.velocity = Vector2.zero;
+        }
+
+        public void StartMovingToRandomDirection()
         {
             float xDirection = Mathf.Sign(Random.Range(-1f, 1f));
             float yDirection = Mathf.Sign(Random.Range(-1f, 1f));

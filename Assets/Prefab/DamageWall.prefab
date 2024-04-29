@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7684244821694049439}
   - component: {fileID: 6301596185766491419}
+  - component: {fileID: 6675276740999917420}
   m_Layer: 9
   m_Name: DamageWall
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6301596185766491419
 BoxCollider2D:
@@ -77,3 +78,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 24}
   m_EdgeRadius: 0
+--- !u!114 &6675276740999917420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213892313618090562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed521b66ff844e486e5e9ad65623950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagesLeftPlayer: 0

@@ -1,7 +1,10 @@
 {
-    "name": "Pong.BallBehavior",
-    "rootNamespace": "Pong.BallBehavior",
-    "references": ["GUID:a2b5259217116ee4a83ed7771ec29d64"],
+    "name": "Pong.MatchSystem",
+    "rootNamespace": "Pong.MatchSystem",
+    "references": [
+        "GUID:a92712e9f62ecee4bb951fb7b6f4af08",
+        "GUID:7d5768e3f82a3ed4aa1af07665452410"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
